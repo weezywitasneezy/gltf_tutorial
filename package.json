@@ -4,7 +4,8 @@
   "description": "gltf viewer tutorial project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server --mode development --devtool eval-source-map",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
