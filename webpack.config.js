@@ -41,10 +41,13 @@ module.exports = {
     ]
   },
   devServer: {
-    contentBase: dist,
-    watchContentBase: true,
-    overlay: true,
-    hot: true,
+    static: {
+        directory: path.resolve(__dirname, "src"),
+        staticOptions: {},
+        publicPath: "/static-public-path/",
+        serveIndex: true,
+        watch: true,
+    }
   },
   plugins: [
     new HtmlWebpackPlugin({
